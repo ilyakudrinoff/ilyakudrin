@@ -1,0 +1,79 @@
+* { padding: 0; margin: 0; }
+body {
+    background: #fff;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+/* HEADER */
+header {
+    padding: 2em;
+    text-align: justify;
+    background: #fff;
+    color: #000;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav {
+    padding:1em;
+}
+
+.nav a {
+    margin: 3em;
+    color: #000;
+    text-decoration: none;
+}
+
+.nav a:hover, .active {
+    border-bottom: 2px solid black;
+}
+
+/* FOOTER */
+footer {
+    padding: 2em;
+    text-align: justify;
+    background: #fff;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+}
+footer p,a {
+    padding: 1em 0em;
+    color: #000;
+    text-decoration: none;
+}
+
+footer div div {
+    background: url('../img/sprite.jpg') no-repeat;
+    width: 50px;
+    height: 50px;
+    display:inline-block;
+}
+.vk {
+    background-position: -72px -2px;
+}
+.tlg {
+    background-position: -143px -213px;
+}
+
+/* CONTAINER */
+.container {
+    background-image: url('../img/fon.jpg');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    display: flex;
+    height: 70%;
+    padding: 15% 0 25% 15%;
+}
+
+.container p {
+    width: 50%;
+    color: #fff;
+    margin-top: 2%;
+}
+
+.container h1 {
+    width: 50%;
+    color: #fff;
+}

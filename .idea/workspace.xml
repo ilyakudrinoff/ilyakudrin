@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8790c495-7e93-4c54-ab9d-6a7927d804f1" name="Changes" comment="" />
+    <list default="true" id="8790c495-7e93-4c54-ab9d-6a7927d804f1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/includes/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/includes/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/kudrin/bookshelf.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/kudrin/bookshelf.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/kudrin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/kudrin/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/kudrin/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/kudrin/news.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/kudrin/store.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/kudrin/store.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,7 +46,7 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/ilya/Projects/hw04_tests/yatube/yatube/settings.py",
+    "last_opened_file_path": "/home/ilyakudrin/PycharmProjects/ilyakudrin",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>

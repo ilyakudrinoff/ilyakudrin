@@ -1,21 +1,10 @@
 {% load static %}
 <header>
-  <nav class="navbar navbar-light" style="background-color: lightskyblue">
-    <div class="container">
-      <a class="navbar-brand" href="{% url 'kudrin:index' %}">
-        <img src="{% static 'img/logo.png' %}" width="30" height="30" class="d-inline-block align-top" alt="">
-        <span style="color:red">ilya</span>kudrin</a>
-      <ul class="nav nav-pills">
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'kudrin:news' %}">Блог</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'kudrin:bookshelf' %}">Книжная полка</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'kudrin:store' %}">Мерч</a>
-        </li>
-      </ul>
+    <div class="nav">
+      {% with request.resolver_match.view_name as view_name %}
+      <a class="{% if view_name == 'kudrin:news' %} active {% endif %}" href="{% url 'kudrin:news' %}">Блог</a>
+      <a class="{% if view_name == 'kudrin:bookshelf' %} active {% endif %}" href="{% url 'kudrin:bookshelf' %}">Книжная полка</a>
+      <a class="{% if view_name == 'kudrin:store' %} active {% endif %}" href="{% url 'kudrin:store' %}">Мерч</a>
+      {% endwith %}
     </div>
-  </nav>
 </header>
