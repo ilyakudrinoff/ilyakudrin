@@ -57,7 +57,7 @@ footer div div {
     background-position: -143px -213px;
 }
 
-/* CONTAINER */
+/* CONTAINER (index.html) */
 .container {
     background-image: url('../img/fon.jpg');
     background-size: 100% auto;
@@ -76,4 +76,32 @@ footer div div {
 .container h1 {
     width: 50%;
     color: #fff;
+}
+
+/* CONTAINER (news.html) */
+/* CONTAINER (store.html) */
+/* CONTAINER (bookshelf.html) */
+
+
+/* Верстка для разрешения экрана менее 768px */
+@media (max-width: 768px) {
+    .nav {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav a {
+        margin:0.5em;
+    }
+
+    .container p {
+        width: 70%;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 0em;
+    }
 }

@@ -2,6 +2,7 @@
 <header>
     <div class="nav">
       {% with request.resolver_match.view_name as view_name %}
+      <a href="{% url 'kudrin:index' %}"><img src="{% static 'img/icon.png' %}"></a>
       <a class="{% if view_name == 'kudrin:news' %} active {% endif %}" href="{% url 'kudrin:news' %}">Блог</a>
       <a class="{% if view_name == 'kudrin:bookshelf' %} active {% endif %}" href="{% url 'kudrin:bookshelf' %}">Книжная полка</a>
       <a class="{% if view_name == 'kudrin:store' %} active {% endif %}" href="{% url 'kudrin:store' %}">Мерч</a>
