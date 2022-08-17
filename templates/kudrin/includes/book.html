@@ -1,0 +1,20 @@
+{% load static %}
+<article>
+    <ul>
+        <li>
+            <h1 class="title-list">{{ book.name }}</h1>
+        </li>
+        <li class="date-list">
+            Дата публикации: {{ book.created_at|date:"d E Y" }}
+        </li>
+        <li>
+            <img src="{{ book.image.url }}" class="img-list"/>
+        </li>
+        <li>
+            <p class="text-list">{{ book.description|truncatewords:70 }}</p>
+        </li>
+        <li>
+            <a href="{% url 'kudrin:book_detail' book.pk %}"><button class="link-list">Подробнее...</button></a>
+        </li>
+    </ul>
+</article>

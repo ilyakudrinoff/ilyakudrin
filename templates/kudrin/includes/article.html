@@ -1,0 +1,20 @@
+{% load static %}
+<article>
+    <ul>
+        <li>
+            <h1 class="title-list">{{ post.title }}</h1>
+        </li>
+        <li class="date-list">
+            Дата публикации: {{ post.created_at|date:"d E Y" }}
+        </li>
+        <li>
+            <img src="{{ post.image.url }}" class="img-list"/>
+        </li>
+        <li>
+            <p class="text-list">{{ post.text|truncatewords:70 }}</p>
+        </li>
+        <li>
+            <a href="{% url 'kudrin:news_detail' post.pk %}"><button class="link-list">Подробнее...</button></a>
+        </li>
+    </ul>
+</article>

@@ -18,12 +18,9 @@ Gender = (
 
 
 class News(TimeStampedModel):
-    image = models.ImageField('Изображение')
+    image = models.ImageField('Изображение', upload_to='static/imgnews', default='default.jpg')
     title = models.CharField('Название', max_length=200)
     text = models.TextField('Текст')
-    link_1 = models.TextField('Ссылка 1', blank=True, max_length=200)
-    link_2 = models.TextField('Ссылка 2', blank=True, max_length=200)
-    link_3 = models.TextField('Ссылка 3', blank=True, max_length=200)
 
     class Meta:
         verbose_name = _('Новости')
@@ -35,7 +32,7 @@ class News(TimeStampedModel):
 
 
 class Store(TimeStampedModel):
-    image = models.ImageField('Изображение')
+    image = models.ImageField('Изображение', upload_to='static/imgstores', default='default.jpg')
     name = models.TextField('Название', max_length=200)
     gender = models.CharField('Гендорный признак', choices=Gender, max_length=20, default=Gender[2])
     price = models.IntegerField()
@@ -51,6 +48,7 @@ class Store(TimeStampedModel):
 
 class BookShelf(TimeStampedModel):
     name = models.CharField('Название', max_length=200)
+    image = models.ImageField('Изображение', upload_to='static/imgbooks', default='default.jpg')
     description = models.TextField('Описание')
     link_1 = models.CharField('Ссылка 1', blank=True, max_length=200)
     link_2 = models.CharField('Ссылка 2', blank=True, max_length=200)

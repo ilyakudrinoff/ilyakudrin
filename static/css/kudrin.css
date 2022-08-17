@@ -13,6 +13,7 @@ header {
     color: #000;
     display: flex;
     justify-content: space-around;
+    z-index: 1;
 }
 
 .nav {
@@ -78,15 +79,49 @@ footer div div {
     color: #fff;
 }
 
+article {
+    padding: 1em 30%;
+    margin-bottom: 5em;
+}
+
+article ul li {
+    list-style-type: none;
+    display: block;
+}
+
+.img-list {
+    width: 50%;
+    height: 50%;
+    margin: 1% 20%;
+}
+
+.text-list {
+    text-align: justify;
+}
+
+.title-list {
+    text-align: center;
+}
+
+.date-list {
+    font-size: 12px;
+}
+
+.link-list {
+    padding: 0;
+    float: right;
+    background-color: #fff;
+    padding: 0.5em;
+    border: 0.2em solid black;
+    cursor: pointer;
+}
 /* CONTAINER (news.html) */
 /* CONTAINER (store.html) */
 /* CONTAINER (bookshelf.html) */
-
-
 /* Верстка для разрешения экрана менее 768px */
 @media (max-width: 768px) {
     .nav {
-        display:flex;
+        display: flex;
         flex-direction: column;
         align-items: center;
     }

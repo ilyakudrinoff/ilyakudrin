@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<article>
+    <ul>
+        <li>
+            <h1 class="title-list">{{ post.title }}</h1>
+        </li>
+        <li class="date-list">
+            Дата публикации: {{ post.created_at|date:"d E Y" }}
+        </li>
+        <li>
+            <img src="{{ post.image.url }}" class="img-list"/>
+        </li>
+        <li>
+            <p class="text-list">{{ post.text }}</p>
+        </li>
+    </ul>
+</article>
+{% endblock %}

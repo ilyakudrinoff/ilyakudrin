@@ -1,3 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
+{% for book in page_obj %}
+    {% include 'kudrin/includes/book.html' %}
+    {% if not forloop.last %}
+        <hr>
+    {% endif %}
+{% endfor %}
 {% endblock %}
