@@ -78,7 +78,7 @@ footer div div {
     width: 50%;
     color: #fff;
 }
-
+/* ПОСТ на bookshelf и news */
 article {
     padding: 1em 30%;
     margin-bottom: 5em;
@@ -115,9 +115,21 @@ article ul li {
     border: 0.2em solid black;
     cursor: pointer;
 }
-/* CONTAINER (news.html) */
+/* ПАГИНАЦИЯ */
+.pag-nav ul{
+    display: flex;
+    list-style-type: none;
+    margin: 0 5em 0 5em;
+}
+
+.pag-nav ul li {
+    border: 0.5px solid black;
+    padding: 0.5em;
+    margin: 0.2em;
+    font-size: 0.7em;
+}
 /* CONTAINER (store.html) */
-/* CONTAINER (bookshelf.html) */
+
 /* Верстка для разрешения экрана менее 768px */
 @media (max-width: 768px) {
     .nav {
