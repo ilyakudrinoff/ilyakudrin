@@ -15,5 +15,10 @@
             <p class="text-list">{{ book.description }}</p>
         </li>
     </ul>
+    <div class="link-book">
+        <a href="{{ book.link_1 }}" target="_blank">Читать в {{ book.name_1 }} ➟</a>
+        <a href="{{ book.link_2 }}" target="_blank">Читать в {{ book.name_2 }} ➟</a>
+        <a href="{{ book.link_3 }}" target="_blank">Читать в {{ book.name_3 }} ➟</a>
+    </div>
 </article>
 {% endblock %}

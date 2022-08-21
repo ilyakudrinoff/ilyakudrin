@@ -50,8 +50,11 @@ class BookShelf(TimeStampedModel):
     name = models.CharField('Название', max_length=200)
     image = models.ImageField('Изображение', upload_to='static/imgbooks', default='default.jpg')
     description = models.TextField('Описание')
+    name_1 = models.CharField('Имя ссылки 1', blank=True, max_length=20)
     link_1 = models.CharField('Ссылка 1', blank=True, max_length=200)
+    name_2 = models.CharField('Имя ссылки 2', blank=True, max_length=20)
     link_2 = models.CharField('Ссылка 2', blank=True, max_length=200)
+    name_3 = models.CharField('Имя ссылки 3', blank=True, max_length=20)
     link_3 = models.CharField('Ссылка 3', blank=True, max_length=200)
 
     class Meta:

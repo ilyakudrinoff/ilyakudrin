@@ -3,14 +3,14 @@ from .models import News, Store, BookShelf
 
 
 class BookshelfAdmin(admin.ModelAdmin):
-    list_display = ('name', 'image', 'description', 'created_at', 'updated_at', 'link_1', 'link_2', 'link_3',)
+    list_display = ('name', 'image', 'description', 'created_at', 'updated_at', 'name_1', 'name_2', 'name_3',)
     search_fields = ('name', 'description',)
     fieldsets = (
         ("Краткая характеристика книги", {
             'fields': ('name', 'description', 'image')
         }),
         ("Ссылки", {
-            'fields': ('link_1', 'link_2', 'link_3',)
+            'fields': ('name_1', 'link_1', 'name_2', 'link_2', 'name_3', 'link_3',)
         })
     )
 

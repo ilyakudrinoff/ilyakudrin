@@ -3,11 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="8790c495-7e93-4c54-ab9d-6a7927d804f1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kudrin/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/kudrin/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kudrin/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/kudrin/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kudrin/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/kudrin/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/kudrin.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/kudrin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kudrin/bookshelf.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/kudrin/bookshelf.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kudrin/includes/paginator.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/kudrin/includes/paginator.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kudrin/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/kudrin/news.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/kudrin/book_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/kudrin/book_detail.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

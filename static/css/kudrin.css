@@ -108,12 +108,25 @@ article ul li {
 }
 
 .link-list {
-    padding: 0;
+    padding: 0.5em;
+    margin-top: 2em;
     float: right;
     background-color: #fff;
-    padding: 0.5em;
     border: 0.2em solid black;
     cursor: pointer;
+}
+
+/* BOOK DETAIL */
+.link-book {
+    display: flex;
+    flex-direction: column;
+}
+
+.link-book a {
+    margin-top: 1em;
+    border: 0.1em solid black;
+    text-align: center;
+
 }
 /* ПАГИНАЦИЯ */
 .pag-nav ul{
