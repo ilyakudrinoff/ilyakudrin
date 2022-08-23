@@ -1,0 +1,14 @@
+{% load static %}
+<article>
+    <ul>
+        <li>
+            <h1 class="title-list">{{ review.name }} {{ review.last_name }}</h1>
+        </li>
+        <li class="date-list">
+            Дата публикации: {{ review.created_at|date:"d E Y" }}
+        </li>
+        <li>
+            <p class="text-list">{{ review.review }}</p>
+        </li>
+    </ul>
+</article>

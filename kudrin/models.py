@@ -51,6 +51,7 @@ class BookShelf(TimeStampedModel):
     image = models.ImageField('Изображение', upload_to='static/imgbooks', default='default.jpg')
     description = models.TextField('Описание')
     count = models.IntegerField('Количество книг у автора', default=0)
+    review = models.ForeignKey(Review, on_delete=models.CASCADE)
     name_1 = models.CharField('Имя ссылки 1', blank=True, max_length=20)
     link_1 = models.CharField('Ссылка 1', blank=True, max_length=200)
     name_2 = models.CharField('Имя ссылки 2', blank=True, max_length=20)
@@ -65,3 +66,30 @@ class BookShelf(TimeStampedModel):
 
     def __str__(self):
         return self.name + " " + str(self.created_at)
+
+class Review(TimeStampedModel):
+    name = models.CharField('Имя', max_length=50)
+    last_name = models.CharField('Фамилия', max_length=50)
+    text = models.CharField('Текст', max_length=2000)
+
+    class Meta:
+        verbose_name = _('Отзывы')
+        verbose_name_plural = _('Отзывы')
+        ordering = ['-created_at',]
+
+    def __str__(self):
+        return self.last_name + " " + str(self.created_at)
+
+
+class BuyQuery(TimeStampedModel):
+    name = models.CharField('Имя', max_length=50)
+    last_name = models.CharField('Фамилия', max_length=50)
+    text = models.CharField('Текст', max_length=2000)
+
+    class Meta:
+        verbose_name = _('Отзывы')
+        verbose_name_plural = _('Отзывы')
+        ordering = ['-created_at',]
+
+    def __str__(self):
+        return self.last_name + " " + str(self.created_at)

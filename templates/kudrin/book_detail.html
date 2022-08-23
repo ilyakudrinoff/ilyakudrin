@@ -16,10 +16,14 @@
         </li>
     </ul>
     <div class="link-book">
-        <a href="{{ book.link_1 }}" target="_blank">Читать в {{ book.name_1 }} ➟</a>
-        <a href="{{ book.link_2 }}" target="_blank">Читать в {{ book.name_2 }} ➟</a>
-        <a href="{{ book.link_3 }}" target="_blank">Читать в {{ book.name_3 }} ➟</a>
-        <a href="{{ book.link_3 }}" target="_blank">Получить от автора (осталось {{ book.count }}) ➟</a>
+        <a href="{% url 'kudrin:book_query' book.pk %}" target="_blank">Читать отзывы (рецензии) ➟</a>
+        <a href="{{ book.link_1 }}" target="_blank">Купить в {{ book.name_1 }} ➟</a>
+        <a href="{{ book.link_2 }}" target="_blank">Купить в {{ book.name_2 }} ➟</a>
+        <a href="{{ book.link_3 }}" target="_blank">Купить в {{ book.name_3 }} ➟</a>
+        {% if book.count > 0 %}
+        <a href="{% url 'kudrin:book_query' book.pk %}" target="_blank">Получить от автора (осталось {{ book.count }}) ➟</a>
+        {% endif %}
+        <a href="{% url 'kudrin:book_query' book.pk %}">Оставить отзыв (рецензию) ➟</a>
     </div>
 </article>
 {% endblock %}

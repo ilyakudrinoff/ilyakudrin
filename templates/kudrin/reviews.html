@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+{% for post in page_obj %}
+    {% include 'kudrin/includes/article.html' %}
+    {% if not forloop.last %}
+        <hr>
+    {% endif %}
+{% endfor %}
+{% include 'kudrin/includes/paginator.html' %}
+{% endblock %}

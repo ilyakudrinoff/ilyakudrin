@@ -53,3 +53,6 @@ def store_detail(request, store_id):
         'store': store
     }
     return render(request, 'kudrin/store_detail.html', context)
+
+def book_query(request, book_id):
+    return render(request, 'kudrin/query.html')
