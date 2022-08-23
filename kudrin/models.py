@@ -50,6 +50,7 @@ class BookShelf(TimeStampedModel):
     name = models.CharField('Название', max_length=200)
     image = models.ImageField('Изображение', upload_to='static/imgbooks', default='default.jpg')
     description = models.TextField('Описание')
+    count = models.IntegerField('Количество книг у автора', default=0)
     name_1 = models.CharField('Имя ссылки 1', blank=True, max_length=20)
     link_1 = models.CharField('Ссылка 1', blank=True, max_length=200)
     name_2 = models.CharField('Имя ссылки 2', blank=True, max_length=20)

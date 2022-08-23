@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kudrin/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/kudrin/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kudrin/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/kudrin/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/kudrin.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/kudrin.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/kudrin/book_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/kudrin/book_detail.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
