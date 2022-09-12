@@ -166,3 +166,11 @@ article ul li {
         padding: 0em;
     }
 }
+
+.container-q p{
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    padding: 1em 30%;
+    margin-bottom: 1em;
+}

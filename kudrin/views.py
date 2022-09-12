@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .utils import paginator
 from .models import News, Store, BookShelf, Review, BuyQuery
+from .forms import ReviewForm, BuyQueryForm
 
 
 def index(request):
@@ -54,20 +55,30 @@ def store_detail(request, store_id):
     }
     return render(request, 'kudrin/store_detail.html', context)
 
+
 def book_query(request, book_id):
-    return render(request, 'kudrin/query.html')
+    form = BuyQueryForm(request.POST or None)
+    if form.is_valid():
+        review = form.save(commit=False)
+        review.book = BookShelf.objects.get(pk=book_id)
+        review.save()
+        return redirect('kudrin:book_detail', book_id)
+    return render(request, 'kudrin/query.html', {'form': form})
 
 
 def book_review(request, book_id):
-    reviews = Review.objects.all()
+    reviews = Review.objects.filter(book=book_id)
     context = {
         'page_obj': paginator(request, reviews)
     }
     return render(request, 'kudrin/reviews.html', context)
 
+
 def create_review(request, book_id):
-    review = Review.objects.all()
-    context = {
-        'review': review
-    }
-    return render(request, 'kudrin/create_review.html', context)
+    form = ReviewForm(request.POST or None)
+    if form.is_valid():
+        review = form.save(commit=False)
+        review.book = BookShelf.objects.get(pk=book_id)
+        review.save()
+        return redirect('kudrin:book_detail', book_id)
+    return render(request, 'kudrin/create_review.html', {'form': form})

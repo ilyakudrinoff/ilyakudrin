@@ -2,22 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8790c495-7e93-4c54-ab9d-6a7927d804f1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/ilyakudrin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ilyakudrin.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kudrin/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/kudrin/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kudrin/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kudrin/migrations/0002_bookshelf_image_alter_news_image_alter_store_image.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kudrin/migrations/0003_remove_news_link_1_remove_news_link_2_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kudrin/migrations/0004_bookshelf_name_1_bookshelf_name_2_bookshelf_name_3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kudrin/migrations/0005_bookshelf_count.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/kudrin/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/kudrin/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kudrin/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/kudrin/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kudrin/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/kudrin/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/kudrin.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/kudrin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kudrin/book_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/kudrin/book_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kudrin/includes/review.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/kudrin/includes/review.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/kudrin/reviews.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/kudrin/reviews.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/kudrin/create_review.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/kudrin/create_review.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/kudrin/query.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/kudrin/query.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
