@@ -46,12 +46,41 @@ class Store(TimeStampedModel):
         return self.name + " " + str(self.created_at)
 
 
+class Review(TimeStampedModel):
+    name = models.CharField('Имя', max_length=50)
+    last_name = models.CharField('Фамилия', max_length=50)
+    text = models.TextField('Текст')
+
+    class Meta:
+        verbose_name = _('Отзывы')
+        verbose_name_plural = _('Отзывы')
+        ordering = ['-created_at',]
+
+    def __str__(self):
+        return self.last_name + " " + str(self.created_at)
+
+
+class BuyQuery(TimeStampedModel):
+    name = models.CharField('Имя', max_length=50)
+    phone = models.CharField('Phone', max_length=11)
+    mail = models.CharField('Почта', max_length=100)
+
+    class Meta:
+        verbose_name = _('Заявка на покупку')
+        verbose_name_plural = _('Заявки на покупку')
+        ordering = ['-created_at',]
+
+    def __str__(self):
+        return self.last_name + " " + str(self.created_at)
+
+
 class BookShelf(TimeStampedModel):
     name = models.CharField('Название', max_length=200)
     image = models.ImageField('Изображение', upload_to='static/imgbooks', default='default.jpg')
     description = models.TextField('Описание')
     count = models.IntegerField('Количество книг у автора', default=0)
-    review = models.ForeignKey(Review, on_delete=models.CASCADE)
+    review = models.ForeignKey(Review, on_delete=models.CASCADE, blank=True, null=True, verbose_name='Отзывы')
+    buyquery = models.ForeignKey(BuyQuery, on_delete=models.CASCADE, blank=True, null=True, verbose_name='Заявка на покупку')
     name_1 = models.CharField('Имя ссылки 1', blank=True, max_length=20)
     link_1 = models.CharField('Ссылка 1', blank=True, max_length=200)
     name_2 = models.CharField('Имя ссылки 2', blank=True, max_length=20)
@@ -66,30 +95,3 @@ class BookShelf(TimeStampedModel):
 
     def __str__(self):
         return self.name + " " + str(self.created_at)
-
-class Review(TimeStampedModel):
-    name = models.CharField('Имя', max_length=50)
-    last_name = models.CharField('Фамилия', max_length=50)
-    text = models.CharField('Текст', max_length=2000)
-
-    class Meta:
-        verbose_name = _('Отзывы')
-        verbose_name_plural = _('Отзывы')
-        ordering = ['-created_at',]
-
-    def __str__(self):
-        return self.last_name + " " + str(self.created_at)
-
-
-class BuyQuery(TimeStampedModel):
-    name = models.CharField('Имя', max_length=50)
-    last_name = models.CharField('Фамилия', max_length=50)
-    text = models.CharField('Текст', max_length=2000)
-
-    class Meta:
-        verbose_name = _('Отзывы')
-        verbose_name_plural = _('Отзывы')
-        ordering = ['-created_at',]
-
-    def __str__(self):
-        return self.last_name + " " + str(self.created_at)

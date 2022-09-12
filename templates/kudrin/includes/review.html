@@ -2,13 +2,13 @@
 <article>
     <ul>
         <li>
-            <h1 class="title-list">{{ review.name }} {{ review.last_name }}</h1>
+            <h1 class="title-list" style="font-size:12pt; text-align: left;">{{ review.name }} {{ review.last_name }}</h1>
         </li>
         <li class="date-list">
-            Дата публикации: {{ review.created_at|date:"d E Y" }}
+            {{ review.created_at|date:"d E Y" }}
         </li>
         <li>
-            <p class="text-list">{{ review.review }}</p>
+            <p class="text-list" style="font-size: 10pt">{{ review.text }}</p>
         </li>
     </ul>
 </article>

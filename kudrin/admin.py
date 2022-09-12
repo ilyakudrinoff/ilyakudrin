@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import News, Store, BookShelf
+from .models import News, Store, BookShelf, Review, BuyQuery
 
 
 class BookshelfAdmin(admin.ModelAdmin):
@@ -34,3 +34,5 @@ class StoreAdmin(admin.ModelAdmin):
 admin.site.register(BookShelf, BookshelfAdmin)
 admin.site.register(News, NewsAdmin)
 admin.site.register(Store, StoreAdmin)
+admin.site.register(Review)
+admin.site.register(BuyQuery)

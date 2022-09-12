@@ -97,6 +97,7 @@ article ul li {
 
 .text-list {
     text-align: justify;
+    word-break: break-all;
 }
 
 .title-list {

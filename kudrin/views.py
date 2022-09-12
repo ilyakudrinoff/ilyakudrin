@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .utils import paginator
-from .models import News, Store, BookShelf
+from .models import News, Store, BookShelf, Review, BuyQuery
 
 
 def index(request):
@@ -56,3 +56,18 @@ def store_detail(request, store_id):
 
 def book_query(request, book_id):
     return render(request, 'kudrin/query.html')
+
+
+def book_review(request, book_id):
+    reviews = Review.objects.all()
+    context = {
+        'page_obj': paginator(request, reviews)
+    }
+    return render(request, 'kudrin/reviews.html', context)
+
+def create_review(request, book_id):
+    review = Review.objects.all()
+    context = {
+        'review': review
+    }
+    return render(request, 'kudrin/create_review.html', context)
