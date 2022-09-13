@@ -167,10 +167,36 @@ article ul li {
     }
 }
 
-.container-q p{
-    border: 2px solid black;
-    display: flex;
-    flex-direction: row;
+form{
     padding: 1em 30%;
-    margin-bottom: 1em;
+    border: 2px solid black;
+}
+#id_name {
+    margin: 2% 0;
+    width: 100%;
+    height: 30px;
+}
+
+#id_last_name {
+    margin: 2% 0;
+    width: 100%;
+    height: 30px;
+}
+
+#id_text {
+    margin: 2% 0;
+    width: 100%;
+
+}
+
+#id_phone {
+    margin: 2% 0;
+    width: 100%;
+    height: 30px;
+}
+
+#id_mail {
+    margin: 2% 0;
+    width: 100%;
+    height: 30px;
 }
