@@ -2,10 +2,11 @@
 {% load static %}
 {% block content %}
 <div>
+    <p align="center"> Оставьте, пожалуйста, свои контактные данные, с Вами обязательно свяжутся! </p>
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Отправить</button>
+        <button type="submit" class="button-click">Купить</button>
     </form>
 </div>
 {% endblock %}

@@ -1,0 +1,20 @@
+{% load static %}
+<article>
+    <ul>
+        <li>
+            <img src="{{ store.image.url }}" class="img-list"/>
+        </li>
+        <li>
+            <h1 class="title-list" style="font-size:12pt; text-align: left;">{{ store.name }}</h1>
+        </li>
+        <li>
+            <p class="text-list" style="font-size: 10pt">{{ store.gender }}</p>
+        </li>
+        <li>
+            <p class="text-list" style="font-size: 10pt">Цена: {{ store.price }} РУБ</p>
+        </li>
+    </ul>
+    <div class="link-book">
+        <a href="{% url 'kudrin:store_query' store.pk %}" target="_blank">Купить ➟</a>
+    </div>
+</article>

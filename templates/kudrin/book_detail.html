@@ -25,9 +25,16 @@
             <a href="{{ book.link_3 }}" target="_blank">Купить в {{ book.name_3 }} ➟</a>
         {% endif %}
         {% if book.count > 0 %}
-        <a href="{% url 'kudrin:book_query' book.pk %}" target="_blank">Купить у автора (осталось {{ book.count }}) ➟</a>
+        <a href="{% url 'kudrin:book_query' book.pk %}">Купить у автора (осталось {{ book.count }}) ➟</a>
         {% endif %}
         <a href="{% url 'kudrin:create_review' book.pk %}">Оставить отзыв (рецензию) ➟</a>
+        {% for review in page_obj %}
+    {% include 'kudrin/includes/review.html' %}
+    {% if not forloop.last %}
+        <hr>
+    {% endif %}
+{% endfor %}
+{% include 'kudrin/includes/paginator.html' %}
     </div>
 </article>
 {% endblock %}

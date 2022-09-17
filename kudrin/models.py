@@ -17,6 +17,19 @@ Gender = (
 )
 
 
+class Author(TimeStampedModel):
+    title = models.CharField('Название', max_length=200)
+    text = models.TextField('Текст')
+
+    class Meta:
+        verbose_name = _('Авторские записки')
+        verbose_name_plural = _('Авторские записки')
+        ordering = ['-created_at', 'title']
+
+    def __str__(self):
+        return self.title + " " + str(self.created_at)
+
+
 class News(TimeStampedModel):
     image = models.ImageField('Изображение', upload_to='static/imgnews', default='default.jpg')
     title = models.CharField('Название', max_length=200)
@@ -33,7 +46,7 @@ class News(TimeStampedModel):
 
 class Store(TimeStampedModel):
     image = models.ImageField('Изображение', upload_to='static/imgstores', default='default.jpg')
-    name = models.TextField('Название', max_length=200)
+    name = models.CharField('Название', max_length=100)
     gender = models.CharField('Гендорный признак', choices=Gender, max_length=20, default=Gender[2])
     price = models.IntegerField()
 
@@ -87,6 +100,7 @@ class BuyQuery(TimeStampedModel):
     phone = models.CharField('Phone', max_length=11)
     mail = models.CharField('Почта', max_length=100)
     book = models.ForeignKey(BookShelf, on_delete=models.CASCADE, blank=True, null=True, verbose_name='Книга')
+    shirt = models.ForeignKey(Store, on_delete=models.CASCADE, blank=True, null=True, verbose_name='Мерч')
 
     class Meta:
         verbose_name = _('Заявка на покупку')

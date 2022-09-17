@@ -1,0 +1,14 @@
+{% load static %}
+<article>
+    <ul>
+        <li>
+            <h1 class="title-list">{{ authors.title }}</h1>
+        </li>
+        <li class="date-list">
+            Дата публикации: {{ authors.created_at|date:"d E Y" }}
+        </li>
+        <li>
+            <p class="text-list">{{ authors.text }}</p>
+        </li>
+    </ul>
+</article>

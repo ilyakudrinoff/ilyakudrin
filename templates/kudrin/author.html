@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
-{% for store in page_obj %}
-    {% include 'kudrin/includes/shirt.html' %}
+{% for authors in page_obj %}
+    {% include 'kudrin/includes/author.html' %}
     {% if not forloop.last %}
         <hr>
     {% endif %}

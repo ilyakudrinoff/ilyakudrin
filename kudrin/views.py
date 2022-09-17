@@ -1,11 +1,19 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .utils import paginator
-from .models import News, Store, BookShelf, Review, BuyQuery
+from .models import News, Store, BookShelf, Review, BuyQuery, Author
 from .forms import ReviewForm, BuyQueryForm
 
 
 def index(request):
     return render(request, 'kudrin/index.html')
+
+
+def author(request):
+    authors = Author.objects.all()
+    context = {
+        'page_obj': paginator(request, authors)
+    }
+    return render(request, 'kudrin/author.html', context)
 
 
 def news(request):
@@ -48,12 +56,14 @@ def book_detail(request, book_id):
     return render(request, 'kudrin/book_detail.html', context)
 
 
-def store_detail(request, store_id):
-    store = get_object_or_404(Store, pk=store_id)
-    context = {
-        'store': store
-    }
-    return render(request, 'kudrin/store_detail.html', context)
+def store_query(request, store_id):
+    form = BuyQueryForm(request.POST or None)
+    if form.is_valid():
+        shirt = form.save(commit=False)
+        shirt.shirt = Store.objects.get(pk=store_id)
+        shirt.save()
+        return redirect('kudrin:store')
+    return render(request, 'kudrin/query.html', {'form': form})
 
 
 def book_query(request, book_id):

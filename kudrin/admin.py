@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import News, Store, BookShelf, Review, BuyQuery
+from .models import News, Store, BookShelf, Review, BuyQuery, Author
 
 
 class BookshelfAdmin(admin.ModelAdmin):
@@ -31,8 +31,15 @@ class StoreAdmin(admin.ModelAdmin):
     search_fields = ('name',)
 
 
+class BuyQueryAdmin(admin.ModelAdmin):
+    list_display = ('name', 'phone', 'mail', 'book', 'shirt', 'created_at', 'updated_at',)
+    list_filter = ('book',)
+    search_fields = ('name',)
+
+
 admin.site.register(BookShelf, BookshelfAdmin)
 admin.site.register(News, NewsAdmin)
 admin.site.register(Store, StoreAdmin)
 admin.site.register(Review)
-admin.site.register(BuyQuery)
+admin.site.register(BuyQuery, BuyQueryAdmin)
+admin.site.register(Author)
