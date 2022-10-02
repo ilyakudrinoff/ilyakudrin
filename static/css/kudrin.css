@@ -149,30 +149,6 @@ article ul li {
     font-size: 0.7em;
 }
 /* CONTAINER (store.html) */
-
-/* Верстка для разрешения экрана менее 768px */
-@media (max-width: 768px) {
-    .nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nav a {
-        margin:0.5em;
-    }
-
-    .container p {
-        width: 70%;
-    }
-
-    footer {
-        flex-direction: column;
-        align-items: center;
-        padding: 0em;
-    }
-}
-
 form{
     padding: 1em 30%;
 }
@@ -219,4 +195,39 @@ form{
 .button-click:hover {
     background-color: #000;
     color: #fff;
+}
+
+/* Верстка для разрешения экрана менее 768px */
+@media screen and (max-width: 768px) {
+    .nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav a {
+        margin:0.5em;
+    }
+
+    .container p{
+        width: 70%;
+    }
+    article {
+        padding: 0.5em 1.2em 0.5em 1.2em;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 0em;
+    }
+    .text-list {
+        font-size: 12px;
+    }
+    .title-list {
+        font-size: 14px;
+    }
+    .date-list {
+        font-size: 9px;
+    }
 }

@@ -10,7 +10,7 @@ INTERVAL_END_NUM = 7
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 
-DEBUG = os.getenv('DEBUG')
+DEBUG = False
 
 ALLOWED_HOSTS = ['kudrinofficial.ru', 'www.kudrinofficial.ru']
 
