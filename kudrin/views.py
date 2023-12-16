@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .utils import paginator
-from .models import News, Store, BookShelf, Review, BuyQuery, Author
+from .models import News, Store, BookShelf, Review, Author
 from .forms import ReviewForm, BuyQueryForm
 
 
@@ -92,3 +92,7 @@ def create_review(request, book_id):
         review.save()
         return redirect('kudrin:book_detail', book_id)
     return render(request, 'kudrin/create_review.html', {'form': form})
+
+
+def info(request):
+    return render(request, 'kudrin/info.html')

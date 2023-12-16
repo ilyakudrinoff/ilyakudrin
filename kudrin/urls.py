@@ -10,6 +10,7 @@ urlpatterns = [
     path('news/', views.news, name='news'),
     path('bookshelf/', views.bookshelf, name='bookshelf'),
     path('store/', views.store, name='store'),
+    path('info', views.info, name='info'),
     path('news/<int:post_id>', views.news_detail, name='news_detail'),
     path('bookshelf/<int:book_id>', views.book_detail, name='book_detail'),
     path('store/<int:store_id>/query', views.store_query, name='store_query'),

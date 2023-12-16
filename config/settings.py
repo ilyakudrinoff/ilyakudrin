@@ -10,9 +10,9 @@ INTERVAL_END_NUM = 7
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['kudrinofficial.ru', 'www.kudrinofficial.ru']
+ALLOWED_HOSTS = ['kudrinofficial.ru', 'www.kudrinofficial.ru', '127.0.0.1']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -22,6 +22,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'kudrin',
+    'debaty',
 ]
 
 MIDDLEWARE = [
@@ -64,6 +65,15 @@ DATABASES = {
         'HOST': 'localhost',
     }
 }
+
+"""
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+"""
 
 
 AUTH_PASSWORD_VALIDATORS = [

@@ -2,10 +2,46 @@
 {% load static %}
 {% block content %}
 <div class="container">
-    <div>
+    <div class="header">
+        <h1>ПРИВЕТ! РАД ВИДЕТЬ ТЕБЯ! ЛИСТАЙ ВНИЗ, ТАМ БУДЕТ ИНТЕРЕСНО</h1>
+    </div>
+    <div class="first">
         <h1>Илья Кудрин</h1>
-        <!--не более 122 chars в абзаце-->
-        <p>Современный российский писатель, поэт. Его произведения о любви и смерти, поиске себя, счастье и свободе, внутреннем мире.</p>
+        <div class="contacts">
+            <a href="https://vk.com/ilya_redaktor" target="_blank"><img src="/static/img/vk.png" alt="vk"/></a>
+            <a href="https://t.me/ilya_redaktor" target="_blank"><img src="/static/img/tlg.png" alt="tlg"/></a>
+            <a href="https://dzen.ru/ilyakudrin" target="_blank"><img src="/static/img/zen.png" alt="dzen"/></a>
+        </div>
+    </div>
+    <div class="second">
+        <h2>Проекты, в которых участвую</h2>
+        <div class="second-block">
+            <div class="etagi">
+                <a href="https://vk.com/aidyn_etagi" target="_blank"><img src="/static/img/etagi.png" alt="etagi"/></a>
+                <a href="https://vk.com/aidyn_etagi" target="_blank"><h4>Этажи-Кызыл <br> SMM</h4></a>
+            </div>
+            <div class="constuva">
+                <a href="https://vk.com/consultant17" target="_blank"><img src="/static/img/constuva.png" alt="constuva"/></a>
+                <a href="https://vk.com/consultant17" target="_blank"><h4>Консультант-Тува <br> PR-manager</h4></a>
+            </div>
+            <div class="debaty">
+                <a href="{% url 'debaty:debaty' %}" target="_blank"><img src="/static/img/debaty.png" alt="debaty"/></a>
+                <a href="{% url 'debaty:debaty' %}" target="_blank"><h4>Дебаты <br> Организатор</h4></a>
+            </div>
+        </div>
+        <div class="third">
+            <h2>Сборники стихов</h2>
+        <div class="third-block">
+            <div class="new-poem">
+                <a href="{% url 'kudrin:info' %}" target="_blank"><img src="/static/img/newday.jpg" alt="new"/></a>
+                <a href="{% url 'kudrin:info' %}" target="_blank"><h4>Новый день</h4></a>
+            </div>
+            <div class="old-poem">
+                <a href="https://www.labirint.ru/books/734407/" target="_blank"><img src="/static/img/27.jpg" alt="old"/></a>
+                <a href="https://www.labirint.ru/books/734407/" target="_blank"><h4>27</h4></a>
+            </div>
+        </div>
+        </div>
     </div>
 </div>
 {% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <div class="header">
+        <h1>Дебаты в Кызыле!<br> Рождественские игры!<br> 7 января 2024! </h1>
+    </div>
+    <div class="third">
+        <h2>Форма для заявки на Рождественские игры</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="button-click">Отправить заявку</button>
+        </form>
+        <a href="{% url 'debaty:debaty' %}"><button type="submit" class="button-click">Всех добавил</button></a>
+    </div>
+</div>
+{% endblock %}
