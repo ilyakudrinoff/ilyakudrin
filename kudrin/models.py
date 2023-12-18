@@ -34,6 +34,7 @@ class News(TimeStampedModel):
     image = models.ImageField('Изображение', upload_to='static/imgnews', default='default.jpg')
     title = models.CharField('Название', max_length=200)
     text = models.TextField('Текст')
+    link = models.CharField('ССылка', max_length=200, blank=True, null=True)
 
     class Meta:
         verbose_name = _('Новости')

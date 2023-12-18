@@ -16,13 +16,9 @@ class BookshelfAdmin(admin.ModelAdmin):
 
 
 class NewsAdmin(admin.ModelAdmin):
-    list_display = ('title', 'text', 'created_at', 'updated_at',)
+    list_display = ('title', 'text', 'created_at', 'updated_at', 'link',)
     search_fields = ('title', 'text',)
-    fieldsets = (
-        ("Краткая характеристика книги", {
-            'fields': ('title', 'text', 'image')
-        }),
-    )
+    
 
 
 class StoreAdmin(admin.ModelAdmin):

@@ -8,11 +8,24 @@
     <div class="first">
         <h1>Илья Кудрин</h1>
         <div class="contacts">
-            <a href="https://vk.com/ilya_redaktor" target="_blank"><img src="/static/img/vk.png" alt="vk"/></a>
             <a href="https://t.me/ilya_redaktor" target="_blank"><img src="/static/img/tlg.png" alt="tlg"/></a>
             <a href="https://dzen.ru/ilyakudrin" target="_blank"><img src="/static/img/zen.png" alt="dzen"/></a>
+            <a href="https://vk.com/ilya_redaktor" target="_blank"><img src="/static/img/vk.png" alt="vk"/></a>
         </div>
     </div>
+    <div class="second">
+        <h2>{{news.title}}</h2>
+        <div class="breakingnews">
+            <div>
+                <img src="{{news.image}}" class="img-deb" alt="debaty"/>
+                <p>{{news.text}}</p>
+            </div>
+            {% if not news.link is empty %}
+                <div>
+                    <a href="{{ news.link }}"><button type="submit" class="button-news">Оставить заявку</button></a>
+                </div>
+            {% endif %}
+        </div>
     <div class="second">
         <h2>Проекты, в которых участвую</h2>
         <div class="second-block">
