@@ -138,7 +138,8 @@ article ul li {
     white-space:pre-line;
     text-transform: none;
     font-size: 18px;
-    margin: 2% auto;
+    padding-left: 2em;
+    padding-right: 2em;
 }
 
 .title-list {
