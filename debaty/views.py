@@ -5,12 +5,13 @@ from .forms import TeamForm, SpeakerForm
 
 
 def debaty(request):
+    news = News.objects.latest('created_at')
     form = TeamForm(request.POST or None)
     if form.is_valid() or request.POST:
         t = Team.objects.create(name=request.POST.get('name'), company=request.POST.get('company'))
         t.save()
         return redirect('debaty:createSpeaker')
-    return render(request, 'debaty/debaty.html', {'form': form})
+    return render(request, 'debaty/debaty.html', {'form': form, 'news': news})
 
 
 def results(request):
