@@ -3,35 +3,57 @@
 {% block content %}
 <div class="container">
     <div class="header">
-        <h1>ПРИВЕТ! РАД ВИДЕТЬ ТЕБЯ! ЛИСТАЙ ВНИЗ, ТАМ БУДЕТ ИНТЕРЕСНО</h1>
+        <h1>ПРИВЕТ! РАД ВИДЕТЬ ВАС!<br> ЛИСТАЙТЕ ВНИЗ, ТАМ БУДЕТ ИНТЕРЕСНО</h1>
     </div>
     <div class="first">
         <h1>Илья Кудрин</h1>
         <div class="contacts">
-            <a href="https://t.me/ilya_kudr" target="_blank"><img src="/static/img/tlg.png" alt="tlg"/></a>
+            <a href="https://t.me/ilya_vladimirovich01" target="_blank"><img src="/static/img/tlg.png" alt="tlg"/></a>
+            <a href="https://vk.com/ilya_vladimirovich01" target="_blank"><img src="/static/img/vk.png" alt="vk"/></a>
         </div>
     </div>
-    <div class="second">
-        <h2>{{news.title}}</h2>
+    <div class="block">
+        <h2>{{newsAboutUs.title}}</h2>
+        <div class="aboutUs">
+            <p class="text-list">{{newsAboutUs.text}}</p>
+            <div class="imgs">
+                <img src="/static/img/ph1.jpg" class="img-gallery" alt="travel"/>
+                <img src="/static/img/ph2.jpg" class="img-gallery" alt="skydream"/>
+                <img src="/static/img/ph3.jpg" class="img-gallery" alt="traveltour"/>
+                <img src="/static/img/ph4.jpg" class="img-gallery" alt="marathon"/>
+                <img src="/static/img/ph5.jpg" class="img-gallery" alt="roz"/>
+                <img src="/static/img/ph6.jpg" class="img-gallery" alt="debaty"/>
+            </div>
+        </div>
+    </div>
+    <div class="block">
+            <h2>{{news.title}}</h2>
         <div class="breakingnews">
             <div>
                 <img src="{{news.image}}" class="img-deb" alt="debaty"/>
                 <p class="text-list">{{news.text}}</p>
             </div>
-            {% if not news.link is empty %}
-                <div>
-                    <a href="{{ news.link }}"><button type="submit" class="button-news">Перейти</button></a>
-                </div>
-            {% endif %}
-        </div>
-    <div class="second">
-        <h2>Проекты, в которых участвую</h2>
-        <div class="second-block">
-            <div class="debaty">
-                <a href="{% url 'debaty:debaty' %}" target="_blank"><img src="/static/img/debaty.png" alt="debaty"/></a>
-                <a href="{% url 'debaty:debaty' %}" target="_blank"><h4>Дебаты <br> Организатор</h4></a>
+            <div>
+                <a href="{% url 'kudrin:news' %}"><button type="submit" class="button-news">Больше новостей -></button></a>
             </div>
         </div>
+    </div>
+        
+    <div class="block">
+        <h2>Проекты, в которых участвую</h2>
+        <div class="second-block">
+            <div>
+                <a href="https://znanierussia.ru/?ysclid=lyl4dxb9hk580143897" target="_blank"><img src="/static/img/znanie.jpg" alt="debaty"/></a>
+                <a href="https://znanierussia.ru/?ysclid=lyl4dxb9hk580143897" target="_blank"><h4>РОЗ<br> Лектор</h4></a>
+            </div>
+            <div>
+                <a href="https://znanierussia.ru/?ysclid=lyl4dxb9hk580143897" target="_blank"><img src="/static/img/ya1.jpg" alt="ya"/></a>
+                <a href="https://znanierussia.ru/?ysclid=lyl4dxb9hk580143897" target="_blank"><h4>Яндекс.Практикум <br> Студент</h4></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
         <div class="third">
             <h2>Сборники стихов</h2>
         <div class="third-block">
@@ -45,6 +67,19 @@
             </div>
         </div>
         </div>
-    </div>
+    </div>   
 </div>
+
+<footer class="block">
+    <div class="contactsFooter">
+        <h4>Контакты для сотрудничества:</h4>
+        <div>
+            <ul>
+                <li><a href="mailto:i@kudrin-01.ru">i@kudrin-01.ru</a></li>
+                <li><a href="https://vk.com/ilya_vladimirovich01">Вконтакте</a></li>
+                <li><a href="https://t.me/ilya_vladimirovich01">Телеграм</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
 {% endblock %}

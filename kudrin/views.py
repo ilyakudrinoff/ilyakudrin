@@ -6,7 +6,8 @@ from .forms import ReviewForm, BuyQueryForm
 
 def index(request):
     news = News.objects.latest('created_at')
-    return render(request, 'kudrin/index.html', {'news': news})
+    newsAboutUs = News.objects.earliest('created_at')
+    return render(request, 'kudrin/index.html', {'news': news, 'newsAboutUs': newsAboutUs})
 
 
 def author(request):

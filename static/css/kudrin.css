@@ -20,6 +20,10 @@ body {
     justify-content: space-around;
 }
 
+h2 {
+    padding-top: 1em;
+}
+
 .container a {
     text-decoration: none;
     color: #000;
@@ -59,8 +63,21 @@ body {
     padding-top: 2em;
 }
 
-.second, .third, .fourth {
+.block {
     padding-top: 5em;
+    padding-bottom: 1em;
+}
+
+.imgs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.img-gallery {
+    height:18em;
+    width: auto;
+    
 }
 
 .second-block {
@@ -140,6 +157,7 @@ article ul li {
     font-size: 18px;
     padding-left: 2em;
     padding-right: 2em;
+    padding-bottom: 1em;
 }
 
 .title-list {
@@ -214,6 +232,18 @@ form{
 .button-click:hover {
     background-color: #000;
     color: #fff;
+}
+
+footer{
+    border-top: #000 1px solid;
+    margin-bottom: 1em;
+}
+
+.contactsFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
 }
 
 @media screen and (max-width: 768px) {
